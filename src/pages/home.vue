@@ -1,6 +1,8 @@
 <template>
-  <div class='home'>慕课</div>
+  <div class='text-xs text-red-500'>慕课</div>
   <span>{{ user.token }}</span>
+  <el-button type="primary">按钮</el-button>
+  <el-icon><Search /></el-icon>
 </template>
 
 <script lang='ts' setup name='Home'>
