@@ -24,11 +24,13 @@
     <!-- 底部的内容导航 -->
   </div>
   <!-- 提醒登录浮层组件 -->
+  <Register></Register>
 </template>
 
 <script lang='ts' setup name='Home'>
   import {useUserStore} from '@/stores/user.js'
   import Header from '@/components/Header.vue'
+  import Register from '@/components/Register.vue'
   const user=useUserStore()
 </script>
 

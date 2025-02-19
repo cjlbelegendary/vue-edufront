@@ -39,16 +39,22 @@
         <a href="#">兑换码</a>
         <a href="#">云服务器</a>
     </div>
-    <div>
-      <el-button link size="large" @click="">登录</el-button>
-      <el-button link size="large" @click="">注册</el-button>  
+    <div v-show="!user.isLogin">
+      <el-button link size="large" @click="modal.switchLoginVisible">登录</el-button>
+      <el-button link size="large" @click="modal.switchRegVisible">注册</el-button>  
     </div>
+    <div v-show="user.isLogin">{{ user.users.account }}</div>
   </div>
 </template>
 
 <script lang='ts' setup name=''>
 import { ArrowDownBold,Search } from '@element-plus/icons-vue';
 import {ref} from 'vue'
+import { useModalStore } from '@/stores/modal.js'
+import { useUserStore } from '@/stores/user.js'
+
+const modal=useModalStore()
+const user=useUserStore()
 const input=ref("")
 const login=()=>{}
 const register=()=>{}
