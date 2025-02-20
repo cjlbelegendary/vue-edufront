@@ -22,6 +22,7 @@
       </div>
       <!-- 高单价导航 -->
       <!-- 课程分类导航 -->
+       <CourseList></CourseList>
     </div>
     <!-- 底部的内容导航 -->
   </div>
@@ -38,6 +39,7 @@ import Register from '@/components/Register.vue'
 import Login from '@/components/Login.vue' 
 import Classify from '@/components/Classify.vue'
 import Swiper from '@/components/Swiper.vue'
+import CourseList from '@/components/CourseList.vue'
 const user=useUserStore()
 
 </script>

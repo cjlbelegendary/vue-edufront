@@ -1,7 +1,7 @@
 <template>
   <div 
-    class="rounded shadow-[0_0_10px_0_#d7d7d7]"
-    :style="{height:'380px', width:'320px'}"
+    class="rounded shadow-[0_0_10px_0_#d7d7d7] bg-slate-800"
+    :style="{height:'380px', width:'370px'}"
   >
     <ul class="py-5">
         <ClassifyItem v-for="(item,index) in list" :key="index" :item="item"></ClassifyItem>

@@ -3,7 +3,7 @@
     :intercal="5000"
     arrow="always"
     height="380px"
-    :style="{height:'380px', width:'840px'}"
+    :style="{height:'380px', width:'800px'}"
     indicator-position="outside"
   >
     <el-carousel-item>
@@ -21,7 +21,7 @@
     <el-carousel-item>
         <img
             class="rounded"
-            src="@/assets/images/Swiper_3.jpg"
+            src="@/assets/images/Swiper_3.png"
         >
     </el-carousel-item>
   </el-carousel>
