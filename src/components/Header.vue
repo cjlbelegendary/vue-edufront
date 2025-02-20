@@ -39,11 +39,17 @@
         <a href="#">兑换码</a>
         <a href="#">云服务器</a>
     </div>
-    <div v-show="!user.isLogin">
+    <div v-if="!user.isLogin">
       <el-button link size="large" @click="modal.switchLoginVisible">登录</el-button>
       <el-button link size="large" @click="modal.switchRegVisible">注册</el-button>  
     </div>
-    <div v-show="user.isLogin">{{ user.users.account }}</div>
+    <div v-else>
+      <el-popconfirm title="是否退出登录?" @confirm="user.logout">
+        <template #reference>
+          <el-button>{{ user.users.account }}</el-button>
+      </template>
+      </el-popconfirm>
+    </div>
   </div>
 </template>
 

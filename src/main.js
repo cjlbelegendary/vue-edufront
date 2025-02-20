@@ -6,6 +6,7 @@ import * as ElementPlusIconsVue from '@element-plus/icons-vue'
 import App from './App.vue'
 import router from './router/router.js'
 import "./tailwindcss.css"
+import piniaPluginPersistedstate from 'pinia-plugin-persistedstate'
 
 const app = createApp(App)
 
@@ -14,9 +15,10 @@ Object.keys(ElementPlusIconsVue).forEach(key => {
   app.component(key, ElementPlusIconsVue[key])
 })
 
-app.use(createPinia())
+const pinia = createPinia()
+pinia.use(piniaPluginPersistedstate)
+app.use(pinia)
 app.use(router)
 app.use(ElementPlus)
-
 
 app.mount('#app')

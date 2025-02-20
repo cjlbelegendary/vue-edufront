@@ -1,5 +1,5 @@
 <template>
-    <el-dialog width="500px"  v-model="modal.isRegVisible" class="relative">
+    <el-dialog width="500px"  v-model="modal.isRegVisible" class="relative ">
         <h1 class="text-center c-#404040 text-22px font-normal mb-1.5">账号注册</h1>
         <div class="pb-44px flex items-center justify-center w-full">
             <el-form name="register">
@@ -9,11 +9,11 @@
                 </el-form-item>
                 <!-- 密码 -->
                 <el-form-item>
-                    密码：<el-input type="password" v-model="password" placeholder="请输入密码" />
+                    密码：<el-input type="password" :show-password="true" v-model="password" placeholder="请输入密码" />
                 </el-form-item>
                 <!-- 确认密码 -->
                 <el-form-item>
-                    确认密码：<el-input type="password" v-model="rePassword" placeholder="请再次输入密码" />
+                    确认密码：<el-input type="password" :show-password="true" v-model="rePassword" placeholder="请再次输入密码" />
                 </el-form-item>
                 <el-form-item>
                     <el-button 
@@ -87,5 +87,4 @@ function handleFinish() {
 </script>
 
 <style scoped>
-  
 </style>
