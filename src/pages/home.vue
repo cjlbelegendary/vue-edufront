@@ -1,10 +1,10 @@
 <template>
   <div class="w-full ">
     <!-- 海报图 -->
-    <img 
+    <!-- <img 
       class="w-full"
       src="@/assets/images/ad.png"
-    >
+    > -->
     <!-- 头部导航 -->
     <div class="shadow mb-[10px]">
       <div class="w-[1200px] mx-auto">
@@ -15,7 +15,9 @@
     <div class="w-[1200px] mx-auto mt-4 mb-4">
       <div class="flex items-center justify-between">
         <!-- 分类导航 -->
+        <Classify></Classify>
         <!-- 轮播图 -->
+        <Swiper></Swiper>
         <!-- 新人福利 -->
       </div>
       <!-- 高单价导航 -->
@@ -34,9 +36,12 @@ import {useUserStore} from '@/stores/user.js'
 import Header from '@/components/Header.vue'
 import Register from '@/components/Register.vue'
 import Login from '@/components/Login.vue' 
+import Classify from '@/components/Classify.vue'
+import Swiper from '@/components/Swiper.vue'
 const user=useUserStore()
+
 </script>
 
 <style scoped>
-  
+
 </style>

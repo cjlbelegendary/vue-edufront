@@ -53,7 +53,7 @@
   </div>
 </template>
 
-<script lang='ts' setup name=''>
+<script lang='ts' setup name='Header'>
 import { ArrowDownBold,Search } from '@element-plus/icons-vue';
 import {ref} from 'vue'
 import { useModalStore } from '@/stores/modal.js'

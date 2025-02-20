@@ -45,7 +45,7 @@
   
 </template>
 
-<script lang='ts' setup name=''>
+<script lang='ts' setup name='Register'>
 import { ElMessage } from 'element-plus';
 import { ref } from 'vue'
 import { useUserStore } from '@/stores/user'

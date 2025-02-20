@@ -40,7 +40,7 @@
   </el-dialog>
 </template>
 
-<script lang='ts' setup name=''>
+<script lang='ts' setup name='Login'>
 import { ref } from 'vue'
 import {useUserStore} from '@/stores/user.js'
 import {useModalStore} from "@/stores/modal.js"
