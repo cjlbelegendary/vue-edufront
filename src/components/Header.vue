@@ -1,7 +1,7 @@
 <template>
   <div class='flex items-center gap-2'>
     <img 
-        class="h-16 w-36"
+        class="h-16 w-40 mr-2"
         src="@/assets/images/logo.png"
     />
     <div class="flex items-center justify-between flex-[1]">
@@ -10,7 +10,7 @@
         <a href="#" class="flex items-center justify-center">
           <img
             src="@/assets/images/VIP.png"
-            class="w-5 h-5"
+            class="w-5 h-5 "
           />
           <span>超级会员</span>
         </a>
