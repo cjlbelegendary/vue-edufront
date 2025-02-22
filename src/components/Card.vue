@@ -48,7 +48,7 @@
                     ￥<span class="mr-1 line-through">{{ card.oldAmount }}</span>
                 </div>
                 <div class="c-#e51b11">
-                    ￥<span class="mr-1 text-16px text-red-500">{{ card.oldAmount }}</span>
+                    ￥<span class="mr-1 text-16px text-red-500">{{ card.amount }}</span>
                 </div>
             </div>
         </div>
