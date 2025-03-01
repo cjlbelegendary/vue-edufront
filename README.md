@@ -1,6 +1,9 @@
-# vue-itmooc
+# vue-edufront
 
 This template should help get you started developing with Vue 3 in Vite.
+
+## 访问地址
+https://cjlbelegendary.github.io/vue-edufront/home
 
 ## Recommended IDE Setup
 
