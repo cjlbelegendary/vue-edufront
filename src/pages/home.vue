@@ -42,6 +42,21 @@ import Swiper from '@/components/Swiper.vue'
 import CourseList from '@/components/CourseList.vue'
 const user=useUserStore()
 
+import axios from 'axios'
+import { onMounted } from 'vue'
+// const response = axios.get('https://spopen.be.mi.com/xiaomi/mishop/vnoOrderDetail/get')
+// onMounted(async()=>{
+//   try{
+//     const response = await axios.get('https://spopen.be.mi.com/xiaomi/mishop/vnoOrderDetail/get')
+//     console.log(response)
+//   }catch(err){
+//     console.log(err)
+//   }
+// })
+
+// import test from"@/utils/request"
+// test.method.getData();
+
 </script>
 
 <style scoped>

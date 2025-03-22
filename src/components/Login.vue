@@ -1,15 +1,17 @@
 <template>
-  <el-dialog width="500px" v-model="modal.isLoginVisible" class="relative ">
-    <h1 class="text-center c-#404040 text-22px font-normal mb-1.5">账号注册</h1>
-    <div class="pb-44px flex items-center justify-center w-full">
+  <el-dialog width="500px" v-model="modal.isLoginVisible" class="relative " style="height: 400px;">
+    <h1 class="text-center c-#404040 text-22px font-normal mb-1.5" style="position: relative;top:30px;">账号登录</h1>
+    <div class="pb-44px flex items-center justify-center w-full" style="position: relative;top:50px;">
         <el-form name="login">
             <!-- 账号 -->
             <el-form-item>
-                账号：<el-input v-model="account" placeholder="请输入账号" />
+                <span>账号：</span>
+                <el-input v-model="account" placeholder="请输入账号" />
             </el-form-item>
             <!-- 密码 -->
             <el-form-item>
-                密码：<el-input type="password" :show-password="true" v-model="password" placeholder="请输入密码" />
+                <span>密码：</span>
+                <el-input type="password" :show-password="true" v-model="password" placeholder="请输入密码" />
             </el-form-item>
             <el-form-item>
                 <el-button 

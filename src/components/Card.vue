@@ -1,6 +1,9 @@
 <template>
   <div class='cursor-pointer w-70 rounded-xl shadow-[5px_5px_10px_0_#d5d5d5]'>
-    <img class="rounded-t-lg" :src="card.coverImg">
+    <router-link to="/detail">
+        <img class="rounded-t-lg" v-lazy="card.coverImg">
+    </router-link>
+    
     <div class="p-2">
         <div class="h-10">
             <span
