@@ -113,7 +113,6 @@ const handleLogin = () => {
     try {
       await user.login(loginForm.account, loginForm.password)
       modal.switchLoginVisible()
-      ElMessage.success('登录成功')
     } catch (error) {
       ElMessage.error(error.message || '登录失败')
     }
