@@ -29,10 +29,14 @@ const list=[
   background-color: #1e293b; /* bg-slate-800 */
   height: 380px;
   width: 370px;
-  
+
   /* 水平居中 */
   margin-left: auto;
   margin-right: auto;
+
+  /* 左偏移 */
+  position:relative;
+  right:12px;
 }
 
 .classify-list {

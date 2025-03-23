@@ -1,11 +1,11 @@
 <template>
-  <div class='flex flex-col gap-8 mt-10'>
+  <div class="course-list">
     <CardContainer
-        v-for="item in data"
-        key="{index}"
-        :title="item.name"
-        :summay="item.summary"
-        :productList="item.productList.slice(0,4)"
+      v-for="item in data"
+      key="{index}"
+      :title="item.name"
+      :summay="item.summary"
+      :productList="item.productList.slice(0,4)"
     />
   </div>
 </template>
@@ -27,20 +27,21 @@ onMounted(async()=>{
     }
     
 })
-        // async () => {
-//     try{
-//         const response = await axios.get(
-//             "https://api-v2.xdclass.net/api/card/v1/list"
-//         )
-//         // console.log(response)
-//         data.value=response.data.data //将请求到的数据赋值给cards
-//     } catch(err){
-//         console.error(err)
-//     }
-// }
-// )
 </script>
 
 <style scoped>
-  
+.course-list {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;  /* Tailwind gap-8 = 2rem = 32px */
+  margin-top: 40px; /* Tailwind mt-10 = 2.5rem = 40px */
+}
+
+/* 可选：添加响应式布局 */
+@media (max-width: 768px) {
+  .course-list {
+    gap: 24px;
+    margin-top: 32px;
+  }
+}
 </style>
