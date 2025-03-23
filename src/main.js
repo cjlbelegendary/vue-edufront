@@ -33,11 +33,11 @@ app.use(VueLazyloadNext, {
   attempt: 3 // 尝试加载次数
 });
 app.mount('#app')
-console.log('请求')
-fetch("/api/users",{
-  method:"post"
-}).then(data=>{
-   console.log("data",data.json().data);
-}).catch(error=>{
-  console.log("error",error);
-})
+// console.log('请求')
+// fetch("/api/users",{
+//   method:"post"
+// }).then(data=>{
+//    console.log("data",data.json().data);
+// }).catch(error=>{
+//   console.log("error",error);
+// })

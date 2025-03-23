@@ -15,7 +15,7 @@ service.interceptors.request.use(config=>{
 //响应拦截器
 service.interceptors.response.use(
     (response)=>{
-        console.log("axios",response.data.data)
+        // console.log("axios",response.data.data)
         return response.data.data;
     },
     error=>{

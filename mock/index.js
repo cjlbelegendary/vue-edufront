@@ -1,5 +1,4 @@
 const list=[
-  [
     {
         "id": 1,
         "name": "热门课程",
@@ -1032,7 +1031,6 @@ const list=[
         "icon": "https://file.xdclass.net/new_website/icon/hot.png",
         "weight": 7
     }
-]
 ]
 
 export default [

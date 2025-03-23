@@ -19,8 +19,8 @@ import { getCourse } from '@/api/course'
 onMounted(async()=>{
     try{
         const response=await getCourse();
-        console.log(response)
-        data.value=response[0];
+        // console.log(response)
+        data.value=response;
     } catch(error){
         console.log(error)
     }
