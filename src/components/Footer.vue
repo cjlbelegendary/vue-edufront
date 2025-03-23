@@ -10,13 +10,13 @@
 
 <script setup name='Footer'>
 import { RouterLink } from 'vue-router';
-
-const info=[
+import {ref} from 'vue'
+const info=ref([
     ['加入我们','xxxxxx','xxxxxx','xxxxxx','xxxxxx'],
     ['客服咨询','xxxxxx','xxxxxx','xxxxxx','xxxxxx'],
     ['合作伙伴','xxxxxx','xxxxxx','xxxxxx','xxxxxx'],
     ['社区','xxxxxx','xxxxxx','xxxxxx','xxxxxx'],
-]
+])
 
 </script>
 
