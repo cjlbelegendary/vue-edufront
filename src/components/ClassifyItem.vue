@@ -2,6 +2,8 @@
     <li
       :style="{lineHeight:'50px'}"
       class="classify-item"
+      @mouseover="isShow=true;transValue();"
+      @mouseout="isShow=false;transValue();"
     >
       <span class="item-text">{{ props.item }}</span>
       <div class="icon-container">
@@ -14,6 +16,13 @@
   
   <script lang='ts' setup name='ClassifyItem'>
   const props=defineProps(['item'])
+  import {ref} from 'vue'
+  const isShow=ref(false)
+  const value=ref(props.item)
+  const emit=defineEmits(["getValue"])
+  const transValue=()=>{
+    emit("getValue",value.value,isShow.value)
+  }
   </script>
   
   <style scoped>

@@ -32,6 +32,7 @@
 .swiper-container{
  position:relative;
  right:20px;
+ box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
 }
 .el-carousel__item h3 {
   color: #475669;

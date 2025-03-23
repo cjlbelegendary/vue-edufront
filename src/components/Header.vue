@@ -41,6 +41,7 @@
         </div>
         <div v-if="!user.isLogin">
           <el-button link size="large" @click="modal.switchLoginVisible">登录</el-button>
+          <span>/</span>
           <el-button link size="large" @click="modal.switchRegVisible">注册</el-button>
         </div>
         <div v-else>
