@@ -1,1 +1,0 @@
-import{b as t,F as r}from"./Footer-Cdn9uWLf.js";import{d as s,h as n,f as a,e as o,F as m,o as l}from"./index-h3speP7Y.js";const c=s({__name:"detail",setup(d){return(i,e)=>(l(),n(m,null,[a(t),e[0]||(e[0]=o("div",null,[o("div")],-1)),a(r)],64))}});export{c as default};
