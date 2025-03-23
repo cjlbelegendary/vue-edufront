@@ -7,21 +7,34 @@
     >
       <h1 class="login-title">账号登录</h1>
       <div class="form-container">
-          <el-form name="login">
+          <el-form 
+            ref="loginFormRef"
+            :model="loginForm"
+            :rules="loginRules"
+            name="login"
+          >
               <!-- 账号 -->
-              <el-form-item>
+              <el-form-item prop="account">
                   <span>账号：</span>
-                  <el-input v-model="account" placeholder="请输入账号" />
+                  <el-input 
+                    v-model="loginForm.account" 
+                    placeholder="请输入账号" 
+                  />
               </el-form-item>
               <!-- 密码 -->
-              <el-form-item>
+              <el-form-item prop="password">
                   <span>密码：</span>
-                  <el-input type="password" :show-password="true" v-model="password" placeholder="请输入密码" />
+                  <el-input 
+                    type="password" 
+                    :show-password="true" 
+                    v-model="loginForm.password" 
+                    placeholder="请输入密码" 
+                  />
               </el-form-item>
               <el-form-item>
                   <el-button 
                       type="primary" 
-                      @click="handleFinish(account,password)"
+                      @click="handleLogin"
                       class="login-button"
                   >
                       <span>立即登录</span>
@@ -31,33 +44,81 @@
       </div>
       <!-- 跳转注册 -->
       <div class="register-container">
-              <span>没有账号?</span>
-              <span
-                  class="register-link"
-                  @click="modal.switchRegVisible();modal.switchLoginVisible()"
-              >
-                  立即注册
-              </span>
-          </div>
+          <span>没有账号?</span>
+          <span
+              class="register-link"
+              @click="modal.switchRegVisible();modal.switchLoginVisible()"
+          >
+              立即注册
+          </span>
+      </div>
     </el-dialog>
-  </template>
+</template>
 
 <script lang='ts' setup name='Login'>
-import { ref } from 'vue'
-import {useUserStore} from '@/stores/user.js'
-import {useModalStore} from "@/stores/modal.js"
+import { ref, reactive } from 'vue'
+import { ElMessage } from 'element-plus'
+import { useUserStore } from '@/stores/user.js'
+import { useModalStore } from "@/stores/modal.js"
 
-const account =ref('')
-const password=ref('')
+// 表单引用
+const loginFormRef = ref()
+// 表单数据
+const loginForm = reactive({
+  account: '',
+  password: ''
+})
 
-const user=useUserStore()
-const modal=useModalStore()
+// 校验规则
+const loginRules = reactive({
+  account: [
+    { 
+      required: true, 
+      message: '请输入账号', 
+      trigger: 'blur' 
+    },
+    { 
+      min: 2, 
+      max: 12, 
+      message: '账号长度应为2-12位', 
+      trigger: 'blur' 
+    }
+  ],
+  password: [
+    { 
+      required: true, 
+      message: '请输入密码', 
+      trigger: 'blur' 
+    },
+    { 
+      min: 8, 
+      max: 16, 
+      message: '密码长度应为8-16位', 
+      trigger: 'blur' 
+    }
+  ]
+})
 
-function handleFinish (account,password) {
-    user.login(account,password)
-    modal.switchLoginVisible()
+const user = useUserStore()
+const modal = useModalStore()
+
+// 登录处理
+const handleLogin = () => {
+  loginFormRef.value.validate(async (valid) => {
+    if (!valid) {
+      ElMessage.warning('请正确填写登录信息')
+      return
+    }
+    
+    try {
+      await user.login(loginForm.account, loginForm.password)
+      modal.switchLoginVisible()
+      ElMessage.success('登录成功')
+    } catch (error) {
+      ElMessage.error(error.message || '登录失败')
+    }
+  })
 }
-
 </script>
 
 <style scoped>
@@ -124,9 +185,9 @@ function handleFinish (account,password) {
   text-decoration: underline;
 }
 
-.login-button:hover {
+/* .login-button:hover {
   background-color: #373d44 !important;
-}
+} */
 
 /* 移动端适配 */
 @media (max-width: 576px) {
