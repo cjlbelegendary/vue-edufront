@@ -1,9 +1,9 @@
 <template>
     <div class="footer-container"> 
         <div class="footer-content" v-for="infoItem in info">
-            <div class="itembox" v-for="item in infoItem">
+            <span class="itembox" v-for="item in infoItem">
                 <RouterLink>{{ item }}</RouterLink>
-            </div>
+            </span>
         </div>
     </div>  
 </template>
@@ -37,5 +37,7 @@ const info=ref([
     color:#5e5e5e;
     line-height: 28px;
     font-size: medium;
+    display:flex;
+    flex-direction: column;
 }
 </style>
