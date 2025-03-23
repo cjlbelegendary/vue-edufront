@@ -1,1 +1,0 @@
-import{_ as t}from"./Header.vue_vue_type_script_setup_true_name_Header_lang-CxG0mqWO.js";import{d as o,h as n,f as r,e as a,F as s,o as m}from"./index-e1KPt_pg.js";const p=o({__name:"detail",setup(l){return(_,e)=>(m(),n(s,null,[r(t),e[0]||(e[0]=a("div",null,[a("div")],-1))],64))}});export{p as default};
