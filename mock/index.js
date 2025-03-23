@@ -1036,7 +1036,7 @@ const list=[
 export default [
   {
     method:"post",
-    url:"/api/course",
+    url:"/api/card/v1/list",
     response:({body})=>{
       return {
         code:200,
