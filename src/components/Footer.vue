@@ -33,7 +33,7 @@ const info=ref([
     width:auto;
     height:200px;
     padding:30px 100px;
-    font-family: 'SimHei';
+    /* font-family: 'SimHei'; */
     color:#5e5e5e;
     line-height: 28px;
     font-size: medium;
