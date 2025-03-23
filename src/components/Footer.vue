@@ -2,7 +2,7 @@
     <div class="footer-container"> 
         <div class="footer-content" v-for="infoItem in info">
             <span class="itembox" v-for="item in infoItem">
-                <RouterLink>{{ item }}</RouterLink>
+                <RouterLink to="/">{{ item }}</RouterLink>
             </span>
         </div>
     </div>  
