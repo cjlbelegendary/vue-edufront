@@ -2,8 +2,10 @@ import axios from 'axios';
 
 //创建axios对象
 const service = axios.create({
-    // baseURL:'http://localhost:5173'
-    baseURL:'https://cjlbelegendary.github.io/vue-edufront'
+    //本地环境
+    baseURL:'http://localhost:5173'
+    //部署环境
+    // baseURL:'https://cjlbelegendary.github.io/vue-edufront'
 });
 
 //请求拦截器
