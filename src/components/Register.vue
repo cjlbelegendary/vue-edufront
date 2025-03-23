@@ -1,6 +1,6 @@
 <template>
     <el-dialog width="500px" v-model="modal.isRegVisible" class="custom-dialog">
-        <h1 class="register-title">账号注册</h1>
+        <h1 class="register-title">注册</h1>
         <div class="form-container">
             <el-form
               name="register"

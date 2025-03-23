@@ -5,7 +5,7 @@
       class="login-dialog" 
       style="height: 400px;"
     >
-      <h1 class="login-title">账号登录</h1>
+      <h1 class="login-title">登录</h1>
       <div class="form-container">
           <el-form 
             ref="loginFormRef"
