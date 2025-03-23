@@ -28,7 +28,7 @@ const list=[
   box-shadow: 0 0 10px 0 #d7d7d7;
   background-color: #1e293b; /* bg-slate-800 */
   height: 380px;
-  width: 370px;
+  width: 380px;
 
   /* 水平居中 */
   margin-left: auto;
@@ -36,7 +36,7 @@ const list=[
 
   /* 左偏移 */
   position:relative;
-  right:12px;
+  right:10px;
 }
 
 .classify-list {

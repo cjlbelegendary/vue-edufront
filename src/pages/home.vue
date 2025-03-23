@@ -4,7 +4,7 @@
         <Header></Header>
     <!-- 主要内容 -->
     <div style=" width: 1200px; margin: 1rem auto;  ">
-      <div style=" display: flex; align-items: center; justify-content: space-between;">
+      <div style=" display: flex; align-items: center; justify-content: space-between; width:1190px;position:relative;left:10px;">
         <!-- 分类导航 -->
         <Classify></Classify>
         <!-- 轮播图 -->
