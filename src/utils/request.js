@@ -3,9 +3,9 @@ import axios from 'axios';
 //创建axios对象
 const service = axios.create({
     //本地环境
-    // baseURL:'http://localhost:5173'
+    baseURL:'http://localhost:5173'
     //部署环境
-    baseURL:'https://api-v2.xdclass.net'
+    // baseURL:'https://api-v2.xdclass.net'
 });
 
 //请求拦截器
