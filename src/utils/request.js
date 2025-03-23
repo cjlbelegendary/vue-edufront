@@ -2,7 +2,7 @@ import axios from 'axios';
 
 //创建axios对象
 const service = axios.create({
-    baseURL:'https://api-v2.xdclass.net'
+    baseURL:'http://localhost:5173'
 });
 
 //请求拦截器
@@ -15,6 +15,7 @@ service.interceptors.request.use(config=>{
 //响应拦截器
 service.interceptors.response.use(
     (response)=>{
+        console.log("axios",response.data.data)
         return response.data.data;
     },
     error=>{

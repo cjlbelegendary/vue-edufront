@@ -8,7 +8,7 @@ import router from './router/router.js'
 import "./tailwindcss.css"
 import piniaPluginPersistedstate from 'pinia-plugin-persistedstate';
 import VueLazyloadNext from 'vue-lazyload-next';
-import "@/mock/index";
+import "../mock/index";
 
 const app = createApp(App)
 
@@ -32,5 +32,12 @@ app.use(VueLazyloadNext, {
   preLoad: 1.3, // 预加载高度的比例
   attempt: 3 // 尝试加载次数
 });
-
 app.mount('#app')
+console.log('请求')
+fetch("/api/users",{
+  method:"post"
+}).then(data=>{
+   console.log("data",data.json().data);
+}).catch(error=>{
+  console.log("error",error);
+})

@@ -13,7 +13,6 @@
 <script lang='ts' setup name='CourseList'>
 import CardContainer from '@/components/CardContainer.vue'
 import { onMounted } from 'vue';
-import axios from 'axios';
 import { ref } from 'vue';
 const data = ref()
 import { getCourse } from '@/api/course'
@@ -21,9 +20,9 @@ onMounted(async()=>{
     try{
         const response=await getCourse();
         console.log(response)
-        data.value=response;
-    } catch(err){
-        console.log(err)
+        data.value=response[0];
+    } catch(error){
+        console.log(error)
     }
     
 })
