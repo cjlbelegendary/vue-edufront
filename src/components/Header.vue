@@ -1,16 +1,16 @@
 <template>
-  <div class='flex items-center gap-2'>
+  <div style="display: flex; align-items: center; gap: 0.5rem;">
     <img 
-        class="h-16 w-40 mr-2"
+        style="height: 4rem;width: 10rem;margin-right: 0.5rem;"
         src="@/assets/images/logo.png"
     />
-    <div class="flex items-center justify-between flex-[1]">
+    <div style="display: flex;align-items: center;justify-content: space-between;flex-grow: 1; flex-shrink: 1; flex-basis: 0%;">
         <a href="#">首页</a>
         <a href="#">课程中心</a>
-        <a href="#" class="flex items-center justify-center">
+        <a href="#" style="display: flex;align-items: center;justify-content:center">
           <img
             src="@/assets/images/VIP.png"
-            class="w-5 h-5 "
+            style="width: 1.25rem;height: 1.25rem;"
           />
           <span>超级会员</span>
         </a>
@@ -28,7 +28,7 @@
           </el-icon>
         </a>
         <a href="#">
-          <el-input placeholder="请输入搜索内容" class="w-60">
+          <el-input placeholder="请输入搜索内容" style="width: 15rem;">
             <template #append>
               <el-icon>
                 <Search />

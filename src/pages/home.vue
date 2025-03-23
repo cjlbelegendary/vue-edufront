@@ -1,19 +1,20 @@
 <template>
-  <div class="w-full ">
+  <div style="width:100%;">
     <!-- 海报图 -->
     <!-- <img 
       class="w-full"
       src="@/assets/images/ad.png"
     > -->
     <!-- 头部导航 -->
-    <div class="shadow mb-[10px]">
-      <div class="w-[1200px] mx-auto">
+    <div style="box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  margin-bottom: 10px;" >
+      <div style=" width: 1200px; margin-left: auto; margin-right: auto;">
         <Header></Header>
       </div>
     </div>
     <!-- 主要内容 -->
-    <div class="w-[1200px] mx-auto mt-4 mb-4">
-      <div class="flex items-center justify-between">
+    <div style=" width: 1200px; margin: 1rem auto;  ">
+      <div style=" display: flex; align-items: center; justify-content: space-between;">
         <!-- 分类导航 -->
         <Classify></Classify>
         <!-- 轮播图 -->
@@ -41,22 +42,6 @@ import Classify from '@/components/Classify.vue'
 import Swiper from '@/components/Swiper.vue'
 import CourseList from '@/components/CourseList.vue'
 const user=useUserStore()
-
-import axios from 'axios'
-import { onMounted } from 'vue'
-// const response = axios.get('https://spopen.be.mi.com/xiaomi/mishop/vnoOrderDetail/get')
-// onMounted(async()=>{
-//   try{
-//     const response = await axios.get('https://spopen.be.mi.com/xiaomi/mishop/vnoOrderDetail/get')
-//     console.log(response)
-//   }catch(err){
-//     console.log(err)
-//   }
-// })
-
-// import test from"@/utils/request"
-// test.method.getData();
-
 </script>
 
 <style scoped>
