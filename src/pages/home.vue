@@ -1,17 +1,7 @@
 <template>
   <div style="width:100%;">
-    <!-- 海报图 -->
-    <!-- <img 
-      class="w-full"
-      src="@/assets/images/ad.png"
-    > -->
     <!-- 头部导航 -->
-    <div style="box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
-  margin-bottom: 10px;" >
-      <div style=" width: 1200px; margin-left: auto; margin-right: auto;">
         <Header></Header>
-      </div>
-    </div>
     <!-- 主要内容 -->
     <div style=" width: 1200px; margin: 1rem auto;  ">
       <div style=" display: flex; align-items: center; justify-content: space-between;">

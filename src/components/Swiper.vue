@@ -7,22 +7,30 @@
     indicator-position="outside"
   >
     <el-carousel-item>
+      <router-link to="/detail">
         <img
             class="rounded"
             src="@/assets/images/Swiper_1.jpg"
         >
+      </router-link>
+        
     </el-carousel-item>
     <el-carousel-item>
+      <router-link to="/detail">
         <img
             class="rounded"
             src="@/assets/images/Swiper_2.jpg"
         >
+      </router-link>
+        
     </el-carousel-item>
     <el-carousel-item>
+      <router-link to="/detail">
         <img
             class="rounded"
             src="@/assets/images/Swiper_3.png"
         >
+      </router-link>
     </el-carousel-item>
   </el-carousel>
 </template>
