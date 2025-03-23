@@ -27,6 +27,7 @@
     </div>
     <!-- 底部的内容导航 -->
   </div>
+  <Footer></Footer>
   <!-- 提醒登录浮层组件 -->
   <Login></Login>
   <Register></Register>
@@ -41,9 +42,10 @@ import Login from '@/components/Login.vue'
 import Classify from '@/components/Classify.vue'
 import Swiper from '@/components/Swiper.vue'
 import CourseList from '@/components/CourseList.vue'
+import Footer from '@/components/Footer.vue'
 const user=useUserStore()
 </script>
 
 <style scoped>
-
+  
 </style>
