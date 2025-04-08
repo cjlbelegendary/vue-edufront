@@ -5,8 +5,6 @@
 项目使用 Vue 3 作为前端框架，Vite 作为构建工具，结合了多种前端库和插件，以实现一个功能丰富的教育前端应用。
 
 
-## 访问地址
-项目的访问地址为：https://cjlbelegendary.github.io/vue-edufront
 
 ## 项目安装
 
